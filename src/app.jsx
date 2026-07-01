@@ -13,7 +13,7 @@ import { resolveDestinationFromPath } from './data/urlNavigation'
 import { useFOVZoom }  from './controls/useFOVZoom'
 import { glass, colors, radius } from './utils/glass'
 import { ZoomIn, ZoomOut } from 'lucide-react'
-import './App.css'
+import './app.css'
 
 export default function App() {
 
