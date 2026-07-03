@@ -1,3 +1,36 @@
+### 📄 c:\Users\Omkar\Desktop\AIISEP\3d optimisation\xyz-master\xyz-master\vercel.json
+*Saved at: 7/1/2026, 9:38:29 PM*
+
+**[ADDED]**
+```
+1     {
+2       "rewrites": [
+3         {
+4           "source": "/(.*)",
+5           "destination": "/index.html"
+6         }
+7       ]
+8     }
+```
+
+---
+
+### 📄 c:\Users\Omkar\Desktop\AIISEP\3d optimisation\xyz-master\xyz-master\src\app.jsx
+*Saved at: 7/1/2026, 9:38:05 PM*
+
+**[REMOVED]**
+```
+(from line ~16)
+import './App.css'
+
+```
+**[ADDED]**
+```
+16    import './app.css'
+```
+
+---
+
 ### 📄 c:\Users\Omkar\Desktop\AIISEP\3d optimisation\xyz-master\xyz-master\src\app.jsx
 *Saved at: 7/1/2026, 9:15:24 PM*
 

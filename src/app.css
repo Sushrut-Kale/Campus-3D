@@ -11,9 +11,9 @@ body {
  /* ── Responsive Top Bar ──────────────────────── */
 .top-bar {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
+  top: calc(16px + env(safe-area-inset-top));
+  left: calc(16px + env(safe-area-inset-left));
+  right: calc(16px + env(safe-area-inset-right));
   z-index: 100;
   display: flex;
   flex-wrap: wrap;
@@ -94,12 +94,23 @@ body {
   -webkit-touch-callout: none;
 }
 
+html, body, #root {
+  height: 100%;
+}
+
 body {
   overflow: hidden;
+  overscroll-behavior: none;   /* kill pull-to-refresh / bounce on mobile */
+  touch-action: none;          /* let the 3D canvas own all gestures */
   background: #070b14;
   font-family: 'Inter', 'SF Pro Display', -apple-system,
                BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Trim the heavy glass blur on phones so the 3D scene stays smooth */
+@media (max-width: 640px) {
+  .top-bar { gap: 8px; }
 }
 
 /* Scrollbar hide */

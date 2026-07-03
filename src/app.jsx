@@ -65,7 +65,7 @@ export default function App() {
     <div style={{
       position:   'relative',
       width:      '100vw',
-      height:     '100vh',
+      height:     '100dvh',
       overflow:   'hidden',
       background: '#070b14',
     }}>
@@ -94,8 +94,8 @@ export default function App() {
       {/* Navigation Panel */}
       <div style={{
         position:   'absolute',
-        bottom:     isExplore ? 210 : 24,
-        left:       24,
+        bottom:     `calc(${isExplore ? 210 : 24}px + env(safe-area-inset-bottom))`,
+        left:       'calc(24px + env(safe-area-inset-left))',
         zIndex:     100,
         transition: 'bottom 0.3s ease',
       }}>
@@ -105,8 +105,8 @@ export default function App() {
       {/* Zoom buttons — always visible */}
       <div style={{
         position:      'absolute',
-        bottom:        isExplore ? 130 : 24,
-        right:         24,
+        bottom:        `calc(${isExplore ? 130 : 24}px + env(safe-area-inset-bottom))`,
+        right:         'calc(24px + env(safe-area-inset-right))',
         zIndex:        300,
         display:       'flex',
         flexDirection: 'column',
@@ -123,10 +123,10 @@ export default function App() {
           {/* Bottom bar — Joystick + NavControls */}
           <div className="explore-bottom-bar" style={{
             position:    'absolute',
-            bottom:      32,
+            bottom:      'calc(32px + env(safe-area-inset-bottom))',
             left:        0,
             right:       0,
-            padding:     '0 24px',
+            padding:     '0 calc(24px + env(safe-area-inset-right)) 0 calc(24px + env(safe-area-inset-left))',
             display:     'flex',
             alignItems:  'flex-end',
             justifyContent: 'space-between',

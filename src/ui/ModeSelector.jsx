@@ -10,32 +10,26 @@ export default function ModeSelector() {
 
   return (
     <div style={{
-      position: 'absolute',
-      top:      16,
-      right:    16,
-      zIndex:   200,
+      ...glass,
+      borderRadius: radius.full,
+      display:      'flex',
+      overflow:     'hidden',
+      padding:      3,
+      gap:          3,
+      zIndex:       200,
     }}>
-      <div style={{
-        ...glass,
-        borderRadius: radius.full,
-        display:      'flex',
-        overflow:     'hidden',
-        padding:      3,
-        gap:          3,
-      }}>
-        <ModeBtn
-          active={!isExplore}
-          onClick={() => setControlMode('ORBIT')}
-          Icon={Globe}
-          label="Orbit"
-        />
-        <ModeBtn
-          active={isExplore}
-          onClick={() => setControlMode('EXPLORE')}
-          Icon={Gamepad2}
-          label="Explore"
-        />
-      </div>
+      <ModeBtn
+        active={!isExplore}
+        onClick={() => setControlMode('ORBIT')}
+        Icon={Globe}
+        label="Orbit"
+      />
+      <ModeBtn
+        active={isExplore}
+        onClick={() => setControlMode('EXPLORE')}
+        Icon={Gamepad2}
+        label="Explore"
+      />
     </div>
   )
 }

@@ -154,8 +154,8 @@ export default function InfoPanel() {
     <div style={{
       ...glassStrong,
       position:     'absolute',
-      top:          72,
-      left:         16,
+      top:          'calc(72px + env(safe-area-inset-top))',
+      left:         'calc(16px + env(safe-area-inset-left))',
       width:        'min(280px, calc(100vw - 32px))',
       borderRadius: radius.xl,
       overflow:     'hidden',

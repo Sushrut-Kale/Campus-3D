@@ -1,0 +1,2 @@
+claude
+doskey /history > history.txt
